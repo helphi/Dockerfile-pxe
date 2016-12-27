@@ -3,7 +3,7 @@ FROM nginx:1.10-alpine
 RUN apk add --no-cache tftp-hpa dhcp nfs-utils
 
 RUN sed -i "s#/usr/share/nginx/html;#/pxe/nginx;#g" /etc/nginx/conf.d/default.conf
-RUN echo "/pxe/nfs *(rw,fsid=0,root_squash,no_subtree_check,insecure)" >> /etc/exports
+RUN echo "/pxe/nfs *(rw,no_root_squash,insecure,nohide,sync)" >> /etc/exports
 
 ADD start.sh /root/start.sh
 
