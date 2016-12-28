@@ -11,6 +11,7 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
          max-lease-time 7200;
          range 192.168.1.50 192.168.1.70;
          option routers 192.168.1.1;
+         option domain-name-servers 192.168.1.1;
          filename "pxelinux.0";
 }
 EOF
