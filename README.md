@@ -25,7 +25,7 @@ cat << EOF >> /pxe/tftp/pxelinux.cfg/default
 label autoinstall
         menu label ^Auto Install
         kernel ubuntu-installer/amd64/linux
-        append vga=788 initrd=ubuntu-installer/amd64/initrd.gz auto=true preseed/url=tftp://192.168.110/preseed.cfg priority=critical ---
+        append vga=788 initrd=ubuntu-installer/amd64/initrd.gz auto=true preseed/url=tftp://192.168.1.110/preseed.cfg priority=critical ---
 EOF
 
 docker run -d --net host -v /pxe:/pxe helphi/pxe 
