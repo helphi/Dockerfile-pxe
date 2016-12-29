@@ -10,10 +10,10 @@ d-i netcfg/get_domain string ubuntu.com
 d-i netcfg/wireless_wep string
 
 d-i mirror/country string manual
-d-i mirror/http/hostname string 192.168.1.110 
+d-i mirror/http/hostname string cc.archive.ubuntu.com
 d-i mirror/http/directory string /ubuntu
 d-i mirror/http/proxy string
-d-i mirror/http/mirror select 192.168.1.110 
+d-i mirror/http/mirror select cc.archive.ubuntu.com
 d-i apt-setup/use_mirror boolean false
 
 d-i passwd/user-fullname string Ubuntu User
