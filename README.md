@@ -1,6 +1,7 @@
 # Dockerfile-pxe
+--------------------
 
-# ubuntu server
+# Install ubuntu server
 ```bash
 mkdir /pxe /pxe/dhcp /pxe/tftp 
 wget http://mirror.bjtu.edu.cn/ubuntu-releases/16.04/ubuntu-16.04-server-amd64.iso
@@ -33,7 +34,7 @@ EOF
 docker run -d --net host -v /pxe:/pxe helphi/pxe 
 ```
 
-# ubuntu desktop
+# Install ubuntu desktop
 ```bash
 mkdir -p /pxe2/tftp/install/netboot
 cd /pxe2/tftp/install/netboot
