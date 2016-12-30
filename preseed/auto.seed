@@ -13,8 +13,6 @@ d-i mirror/country string manual
 d-i mirror/http/hostname string 192.168.1.110
 d-i mirror/http/directory string /ubuntu
 d-i mirror/http/proxy string
-d-i mirror/http/mirror select 192.168.1.110
-d-i apt-setup/use_mirror boolean false
 
 d-i passwd/user-fullname string Ubuntu User
 d-i passwd/username string ubuntu
@@ -52,7 +50,7 @@ d-i debian-installer/allow_unauthenticated boolean true
 
 tasksel tasksel/first multiselect ubuntu-desktop
 d-i pkgsel/upgrade select none
-d-i pkgsel/language-packs multiselect en, zh
+d-i pkgsel/language-packs multiselect en, zh-hans
 d-i pkgsel/update-policy select none
 
 d-i grub-installer/only_debian boolean true
